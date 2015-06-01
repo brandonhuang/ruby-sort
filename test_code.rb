@@ -1,5 +1,6 @@
 require_relative 'bubble_sort'
 require_relative 'merge_sort'
+require_relative 'quick_sort'
 require 'benchmark'
 
 # Find the maximum 
@@ -35,6 +36,7 @@ puts "max of just 6 is: #{result}"
 
 random_int = (0..100).to_a.sort{ rand() - 0.5}
 
-puts Benchmark.measure { @merge_result = merge_sort(random_int) }
 puts Benchmark.measure { @default_result = random_int.sort }
+puts Benchmark.measure { @quick_result = quick_sort(random_int) }
+puts Benchmark.measure { @merge_result = merge_sort(random_int) }
 puts Benchmark.measure { @bubble_result = bubble_sort(random_int) }
