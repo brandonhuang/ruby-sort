@@ -33,7 +33,7 @@ result = maximum([6])
 puts "max of just 6 is: #{result}"
 
 
-random_int = (0..10_000).to_a.sort{ rand() - 0.5}
+random_int = (0..100).to_a.sort{ rand() - 0.5}
 
 puts Benchmark.measure { @merge_result = merge_sort(random_int) }
 puts Benchmark.measure { @default_result = random_int.sort }

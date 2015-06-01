@@ -3,9 +3,11 @@ def bubble_sort(arr)
     return []
   end
   swapped = true
+  cutoff = arr.length
+
   while swapped
     swapped = false
-    arr.each_index do |i|
+    for i in (0..cutoff)
       if arr[i+1] == nil
         #do nothing
       elsif arr[i] > arr[i+1]
@@ -13,6 +15,7 @@ def bubble_sort(arr)
         swapped = true
       end
     end
+    cutoff -= 1
   end
   return arr
 end

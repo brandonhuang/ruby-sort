@@ -3,7 +3,7 @@ def merge_sort(arr)
   if arr.length <= 1
     return arr
   end
-
+  
   # divide the array into equal-sized sublists
   left = []
   right = []
