@@ -10,9 +10,9 @@ def merge_sort(arr)
 
   middle = (arr.length / 2).round
 
-  left << arr.slice(0, middle - 1)
+  left << arr[0..middle - 1]
   left.flatten!
-  right << arr.slice(middle, arr.length - 1)
+  right << arr[middle..arr.length - 1]
   right.flatten!
 
   # Recursively sort both sublists
